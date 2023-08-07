@@ -114,6 +114,9 @@ def main():
             # Create Sudoku board
             sudoku_board = Board(9, 9, screen, difficulty)
 
+            # Generate the Sudoku board
+            generated_sudoku_board = generate_sudoku(9, 30)  # Adjust size and removed cells as needed
+
 
             # Draw Sudoku board
             sudoku_board.draw()
