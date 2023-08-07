@@ -144,4 +144,5 @@ class Board:
     def draw(self):
         for row in self.cells:
             for cell in row:
+                cell.value = generated_sudoku_board[cell.row][cell.col]
                 cell.draw()
