@@ -117,7 +117,6 @@ def main():
             # Generate the Sudoku board
             generated_sudoku_board = generate_sudoku(9, 30)  # Adjust size and removed cells as needed
 
-
             # Draw Sudoku board
             sudoku_board.draw()
 
@@ -151,22 +150,19 @@ def main():
                     # Handle button clicks
                     if 200 < mouse_x < 300 and 525 < mouse_y < 575:
                         # Handle reset button click
-                        sudoku_board.reset()
+                        sudoku_board.reset_to_original()
                     elif 350 < mouse_x < 450 and 525 < mouse_y < 575:
                         # Handle restart button click
-                        current_state = GAME_START
+                        sudoku_board = Board(9, 9, screen, difficulty)
                     elif 500 < mouse_x < 600 and 525 < mouse_y < 575:
                         current_state = GAME_START  # Return to the main menu
 
             # Draw Sudoku board
             sudoku_board.draw()
 
-
-
         elif current_state == GAME_OVER:
-            pass
-        # Draw the game over screen
-        # Display win or lose message and options to restart or exit
+            # Clear the screen
+            screen.fill(WHITE)
 
         pygame.display.flip()
 
