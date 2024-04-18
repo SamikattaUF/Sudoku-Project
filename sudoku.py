@@ -1,4 +1,6 @@
-from sudoku_generator import SudokuGenerator, Cell, Board, generate_sudoku
+from sudoku_generator import *
+from Cell import *
+from Board import *
 import pygame
 
 
